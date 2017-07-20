@@ -15,18 +15,37 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 
-			if ($text == "เปิดไฟ"  ){
-			$replyToken = $event['replyToken'];
+			if ($text == "ปิดไฟห้องนอน"  ){ //Bed Room Light
+				$replyToken = $event['replyToken'];
 			// Build message to reply back
+				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/0");
+				curl_exec($ch);
 
-			$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/1");
-			curl_exec($ch);
+				$messages = [
+					'type' => 'text',
+					'text' => "ปิดไฟห้องนอนเรียบร้อย"
+				];
+			}
+			else if ($text == "เปิดไฟห้องนอน"){
+				$replyToken = $event['replyToken'];
+				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/1");
+				curl_exec($ch);
 
-			$messages = [
-				'type' => 'text',
-				'text' => "เปิดไฟเรียบร้อย"
-			];
-		}
+				$messages = [
+					'type' => 'text',
+					'text' => "เปิดไฟห้องนอนเรียบร้อย"
+				];
+			}
+			else{
+				$replyToken = $event['replyToken'];
+				$messages = [
+					'type' => 'text',
+					'text' => $text
+				];
+			}
+
+
+
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
