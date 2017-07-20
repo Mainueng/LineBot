@@ -15,16 +15,15 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 
-			//if ($text == "เปิดไฟ"  ){
-
+			if ($text == "เปิดไฟ"  ){
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
-				//'text' => "เปิดไฟเรียบร้อย"
+				'text' => "เปิดไฟเรียบร้อย"
 			];
-		//}
+			$url = 'https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/1';
+		}
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
