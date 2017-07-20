@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => "เปิดไฟเรียบร้อย"
 			];
-			$url = 'https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/1';
+			$url = 'https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/0';
 		}
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
