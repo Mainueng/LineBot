@@ -19,11 +19,8 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
 
-			$url2 = 'https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/1';
-
-			$ch2 = curl_init($url2);
-			curl_setopt($ch2, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_close($ch2);
+			$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/1");
+			curl_exec($ch);
 
 			$messages = [
 				'type' => 'text',
