@@ -36,7 +36,7 @@ if (!is_null($events['events'])) {
 					'text' => "เปิดไฟห้องนอนเรียบร้อย"
 				];
 			}
-			else if ($text == "ปิดไฟห้องนั่ง้เล่น"){
+			else if ($text == "ปิดไฟห้องนั่งเล่น"){
 				$replyToken = $event['replyToken'];
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Living_Room/0");
 				curl_exec($ch);
@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 					'text' => "ปิดไฟห้องนั่งเล่นเรียบร้อย"
 				];
 			}
-			else if ($text == "เปิดไฟห้องนั่ง้เล่น"){
+			else if ($text == "เปิดไฟห้องนั่งเล่น"){
 				$replyToken = $event['replyToken'];
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Living_Room/1");
 				curl_exec($ch);
