@@ -15,7 +15,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 
-			if ($text == "123"  ){
+			if ($text == "สวัสดี"  ){
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
 			$messages = [
