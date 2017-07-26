@@ -20,16 +20,16 @@ if (!is_null($events['events'])) {
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/0");
 				curl_exec($ch);
 
-				$messages = [
+/*				$messages = [
 					'type' => 'text',
 					'text' => "ปิดไฟห้องนอนเรียบร้อย"
 				];
-/*				$messages = [
+*/				$messages = [
 					'type' => 'sticker',
-					'packageId': "1",
-    				'stickerId': "1"//
+					'packageId': '10..176',
+    				'stickerId': '2.5.99'//
     			];
-*/			}
+			}
 			else if ($text == "เปิดไฟห้องนอน"){
 				$replyToken = $event['replyToken'];
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/1");
