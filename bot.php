@@ -1,6 +1,7 @@
 <?php
 $access_token = 'WBprEIEdmn/9vZJw+q3NcTQxUk/HdMcReUObJ1dkjOWzDX3X07ASeOkbPI21hKk4eCpZ2aw0HDs+Oa2FjmX6vN1UtzBic3gUxzdS1OgYQ52SYnKuu6E8qlD4c0sgjPHN6P86VymSKnYPxX/B8hWz6gdB04t89/1O/w1cDnyilFU=';
 
+// Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
@@ -14,7 +15,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 
-			if ($text == "ปิดไฟห้องนอน"  ){
+			if ($text == "ปิดไฟห้องนอน"  ){ //Bed Room Light
 				$replyToken = $event['replyToken'];
 			// Build message to reply back
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/0");
@@ -24,7 +25,6 @@ if (!is_null($events['events'])) {
 					'type' => 'text',
 					'text' => "ปิดไฟห้องนอนเรียบร้อย"
 				];
-				
 			}
 			else if ($text == "เปิดไฟห้องนอน"){
 				$replyToken = $event['replyToken'];
@@ -35,6 +35,7 @@ if (!is_null($events['events'])) {
 					'type' => 'text',
 					'text' => "เปิดไฟห้องนอนเรียบร้อย" 
 				];
+			}
 			else if ($text == "ปิดไฟห้องนั่งเล่น"){
 				$replyToken = $event['replyToken'];
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Living_Room/0");
@@ -57,10 +58,9 @@ if (!is_null($events['events'])) {
 			}
 			else{
 				$replyToken = $event['replyToken'];
-				$message = [
-					'type' => 'sticker',
-					"packageId" => '1',
-    				"stickerId" => '1'
+				$messages = [
+					'type' => 'text',
+					'text' => $text
 				];
 			}
 
