@@ -25,6 +25,11 @@ if (!is_null($events['events'])) {
 					'type' => 'text',
 					'text' => "ปิดไฟห้องนอนเรียบร้อย"
 				];
+				$messages = [
+					'type' => 'sticker',
+					'packageId' => '1',
+    				'stickerId' => '2'
+				];
 			}
 			else if ($text == "เปิดไฟห้องนอน"){
 				$replyToken = $event['replyToken'];
