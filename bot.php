@@ -26,6 +26,7 @@ if (!is_null($events['events'])) {
 					'text' => "ปิดไฟห้องนอนเรียบร้อย"
 					
 				];
+
 				$messages2 = [
 					'type' => 'sticker',
 					'packageId' => '1',
@@ -76,7 +77,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$messages,$messages2],
 			
 			];
 			$post = json_encode($data);
