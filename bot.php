@@ -57,6 +57,7 @@ if (!is_null($events['events'])) {
 			}
 			else{
 				$replyToken = $event['replyToken'];
+				$message = [
 					'type' => 'text',
 					'text' => $text
 				];
