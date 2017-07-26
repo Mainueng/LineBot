@@ -20,9 +20,9 @@ if (!is_null($events['events'])) {
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/0");
 				curl_exec($ch);
 
-				$messages = [
-					'type' => 'text',
-					'text' => "ปิดไฟห้องนอนเรียบร้อย"
+//				$messages = [
+//					'type' => 'text',
+//					'text' => "ปิดไฟห้องนอนเรียบร้อย"
 				];
 				$messages = [
 					'type' => 'sticker',
