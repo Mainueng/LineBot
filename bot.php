@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 				curl_exec($ch);
 
 				$messages = [
-					'type' => 'text,sticker',
+					'type' => 'text','sticker',
 					'text' => "ปิดไฟห้องนอนเรียบร้อย"
 					'packageId' => '1',
     				'stickerId' => '2'
