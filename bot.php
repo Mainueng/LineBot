@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 
-			if ($text == "ปิดไฟห้องนอน"  ){ //Bed Room Light
+			if ($text == "ปิดไฟห้องนอน"  ){
 				$replyToken = $event['replyToken'];
 			// Build message to reply back
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/0");
