@@ -24,8 +24,6 @@ if (!is_null($events['events'])) {
 				$messages = [
 					'type' => 'text',
 					'text' => "ปิดไฟห้องนอนเรียบร้อย"
-				];
-				$messages = [
 					'type' => 'sticker',
 					'packageId' => '1',
     				'stickerId' => '2'
