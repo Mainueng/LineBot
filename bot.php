@@ -21,11 +21,11 @@ if (!is_null($events['events'])) {
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Bed_Room/0");
 				curl_exec($ch);
 
-				$messages2 = [
+				$messages = [
 					'type' => 'text',
 					'text' => "ปิดไฟห้องนอนเรียบร้อย"
 				];
-				$messages = [
+				$messages2 = [
 					'type' => 'sticker',
 					'packageId' => '1',
     				'stickerId' => '2'
@@ -75,8 +75,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
-				'messages' => [$messages2],
+				'messages' => [$messages],[$messages2]
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
