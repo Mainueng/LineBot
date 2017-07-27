@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 
 				$messages = [
 					'type' => 'text',
-					'text' => "ปิดไฟห้องนอนเรียบร้อย"
+					'text' => "MaiNueng ปิดไฟเรียบร้อย"
 					
 				];
 
@@ -40,8 +40,15 @@ if (!is_null($events['events'])) {
 
 				$messages = [
 					'type' => 'text',
-					'text' => "เปิดไฟห้องนอนเรียบร้อย" 
+					'text' => "MaiNueng เปิดไฟเรียบร้อย" 
 				];
+				
+				$messages2 = [
+					'type' => 'sticker',
+					'packageId' => '1',
+    				'stickerId' => '2'
+    			];
+			}
 			}
 			else if ($text == "ปิดไฟห้องนั่งเล่น"){
 				$replyToken = $event['replyToken'];
