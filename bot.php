@@ -20,6 +20,7 @@ if (!is_null($events['events'])) {
 				$symbol = explode(" ", $text);
 					if($symbol[1] == "+"){
 						$cal = intval($symbol[0]) + intval($symbol[2]);
+						$cal = strval($cal);
 					}
 					else if($symbol[1] == "-"){
 						$cal = intval($symbol[0]) - intval($symbol[2]);	
