@@ -78,7 +78,7 @@ if (!is_null($events['events'])) {
 						'type' => 'text',
 						'text' => $text
 				]; 
-				}
+				
 
 					/*if($symbol[1] == "+"){
 						$cal = intval($symbol[0]) + intval($symbol[2]);
