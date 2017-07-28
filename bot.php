@@ -72,7 +72,7 @@ if (!is_null($events['events'])) {
 
 			else if (strpos($text,'=') !== false){
 				$symbol = explode("", $text);
-					if($symbol[1] == "+"){
+					/*if($symbol[1] == "+"){
 						$cal = intval($symbol[0]) + intval($symbol[2]);
 					}
 					else if($symbol[1] == "-"){
@@ -83,22 +83,22 @@ if (!is_null($events['events'])) {
 					}
 					else if($symbol[1] == "/"){
 						$cal = intval($symbol[0]) / intval($symbol[2]);	
-					}
+					}*/
 				
 				$replyToken = $event['replyToken'];
 				$messages = [
 					'type' => 'text',
-					'text' => $cal
+					'text' => $text
 				]; 
 			}
 
-			
+			else{
 				$replyToken = $event['replyToken'];
 				$messages = [
 					'type' => 'text',
 					'text' => $text
 				];
-			
+			}
 
 
 
