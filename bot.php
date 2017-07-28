@@ -70,27 +70,7 @@ if (!is_null($events['events'])) {
 				];
 			}
 
-			else if (strpos($text,'=') !== false){
-				$symbol = explode("", $text);
-					if($symbol[1] == "+"){
-						$cal = intval($symbol[0]) + intval($symbol[2]);
-					}
-					else if($symbol[1] == "-"){
-						$cal = intval($symbol[0]) - intval($symbol[2]);	
-					}
-					else if($symbol[1] == "*"){
-						$cal = intval($symbol[0]) * intval($symbol[2]);	
-					}
-					else if($symbol[1] == "/"){
-						$cal = intval($symbol[0]) / intval($symbol[2]);	
-					}
-				
-				$replyToken = $event['replyToken'];
-				$messages = [
-					'type' => 'text',
-					'text' => $cal
-				]; 
-			}
+
 
 			else{
 				$replyToken = $event['replyToken'];
