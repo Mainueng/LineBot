@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 				$symbol = explode(" ", $text);
 					if($symbol[1] == "+"){
 						$cal = intval($symbol[0]) + intval($symbol[2]);
-						$cal2 = (string)$cal;
+						$cal = (string)$cal;
 					}
 					/*else if($symbol[1] == "-"){
 						$cal = intval($symbol[0]) - intval($symbol[2]);	
@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
 					$replyToken = $event['replyToken'];
 					$messages = [
 						'type' => 'text',
-						'text' => $cal2
+						'text' => $cal
 				]; 
 				}
 
