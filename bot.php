@@ -49,7 +49,6 @@ if (!is_null($events['events'])) {
     				'stickerId' => '2'
     			];
 			}
-			}
 			else if ($text == "ปิดไฟห้องนั่งเล่น"){
 				$replyToken = $event['replyToken'];
 				$ch = curl_init("https://api.anto.io/channel/set/a67sMedxyPSvQ8Lo1ZEc2DrItGgYpiATFnqkzbJK/NodeMCU/Living_Room/0");
