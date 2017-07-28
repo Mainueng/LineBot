@@ -39,12 +39,12 @@ if (!is_null($events['events'])) {
 				]; 
 					$messages2 = [
 						'type' => 'text',
-						'text' => "เลขง่ายๆแค่นี้เองคิดไม่ได้หรอ MaiNueng เสียใจ"
+						'text' => "มียากกว่านี้ไหม MaiNueng เบื่อ"
 				];
 					$messages3 = [
 						'type' => 'sticker',
 						'packageId' => '1',
-    					'stickerId' => '3'
+    					'stickerId' => '1'
 						];
 			}
 
