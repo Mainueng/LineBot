@@ -32,6 +32,8 @@ if (!is_null($events['events'])) {
 					}
 
 					$cal = (string)$cal;
+				
+				if ($cal <= 999999999999999999 ) {
 					$replyToken = $event['replyToken'];
 					$messages = [
 						'type' => 'text',
@@ -46,6 +48,23 @@ if (!is_null($events['events'])) {
 						'packageId' => '1',
     					'stickerId' => '1'
 						];
+				}
+				else if ($cal > 999999999999999999){
+					$replyToken = $event['replyToken'];
+					$messages = [
+						'type' => 'text',
+						'text' => "Error !!!"
+				]; 
+					$messages2 = [
+						'type' => 'text',
+						'text' => "เลขเยอะเกินไป MaiNueng คิดไม่ไหว"
+				];
+					$messages3 = [
+						'type' => 'sticker',
+						'packageId' => '1',
+    					'stickerId' => '1'
+						];
+				}
 			}
 
 			else {
