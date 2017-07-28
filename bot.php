@@ -16,7 +16,8 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 
 
-			//else if (strpos('=',$text) !== false){
+			if (strpos($text, '=') !== false) {
+}
 			$symbol = explode(" ", $text);
 				
 					$replyToken = $event['replyToken'];
