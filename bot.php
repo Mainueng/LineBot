@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 					$messages3 = [
 						'type' => 'sticker',
 						'packageId' => '1',
-    					'stickerId' => '6'
+    					'stickerId' => '7'
 						];
 				}
 				else if ($cal > 999999999999999999){
