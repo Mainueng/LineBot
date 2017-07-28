@@ -27,11 +27,11 @@ if (!is_null($events['events'])) {
 					
 				];
 
-				$messages2 = [
-					'type' => 'sticker',
-					'packageId' => '1',
-    				'stickerId' => '2'
-    			];
+			//	$messages2 = [
+			//		'type' => 'sticker',
+			//		'packageId' => '1',
+    		//		'stickerId' => '2'
+    		//	];
 			}
 			else if ($text == "เปิดไฟห้องนอน"){
 				$replyToken = $event['replyToken'];
