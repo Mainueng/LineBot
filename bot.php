@@ -72,11 +72,11 @@ if (!is_null($events['events'])) {
 
 			//else if (strpos('=',$text) !== false){
 			$symbol = explode(" ", $text);
-				if($symbol[0] == '='){
+				
 					$replyToken = $event['replyToken'];
 					$messages = [
 						'type' => 'text',
-						'text' => "ssss"
+						'text' => $symbol[0]
 				]; 
 				}
 
