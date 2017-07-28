@@ -71,7 +71,7 @@ if (!is_null($events['events'])) {
 			}
 
 			//else if (strpos('=',$text) !== false){
-			$symbol = explode("", $text);
+			$symbol = explode(" ", $text);
 				if($symbol[3] == "="){
 					$replyToken = $event['replyToken'];
 					$messages = [
