@@ -43,11 +43,11 @@ if (!is_null($events['events'])) {
 					'text' => "MaiNueng เปิดไฟเรียบร้อย" 
 				];
 				
-				$messages2 = [
-					'type' => 'sticker',
-					'packageId' => '1',
-    				'stickerId' => '2'
-    			];
+			//	$messages2 = [
+			//		'type' => 'sticker',
+			//		'packageId' => '1',
+    		//		'stickerId' => '2'
+    		//	];
 			}
 			else if ($text == "ปิดไฟห้องนั่งเล่น"){
 				$replyToken = $event['replyToken'];
