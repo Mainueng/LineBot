@@ -53,14 +53,14 @@ if (!is_null($events['events'])) {
 						'type' => 'text',
 						'text' => $text
 				];
-				$messages2 = [
+				/*$messages2 = [
 						'type' => 'text',
 						'text' => $text
 				]; 
 				$messages3 = [
 						'type' => 'text',
 						'text' => $text
-				];  
+				];*/  
 			}	
 			
 
