@@ -17,7 +17,7 @@ if (!is_null($events['events'])) {
 
 
 			if (strpos($text, '=') !== false) {
-}
+
 			$symbol = explode(" ", $text);
 				
 					$replyToken = $event['replyToken'];
@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 						'type' => 'text',
 						'text' => $symbol[0]
 				]; 
-				
+				}
 
 					/*if($symbol[1] == "+"){
 						$cal = intval($symbol[0]) + intval($symbol[2]);
