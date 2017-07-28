@@ -29,6 +29,7 @@ if (!is_null($events['events'])) {
 					}
 					else if($symbol[1] == "/"){
 						$cal = intval($symbol[0]) / intval($symbol[2]);	
+					}
 					
 					$cal = (string)$cal;
 					$replyToken = $event['replyToken'];
