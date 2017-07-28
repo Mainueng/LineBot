@@ -6,7 +6,6 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
@@ -71,27 +70,13 @@ if (!is_null($events['events'])) {
 					'text' => "เปิดไฟห้องนั่งเล่นเรียบร้อย"
 				];
 			}
-			/*else if (strpos($text,'=') !== false){
-				$symbol = explode("", $text);
-					if($symbol[1] == "+"){
-						$cal = intval($symbol[0]) + intval($symbol[2]);
-					}
-					else if($symbol[1] == "-"){
-						$cal = intval($symbol[0]) - intval($symbol[2]);	
-					}
-					else if($symbol[1] == "*"){
-						$cal = intval($symbol[0]) * intval($symbol[2]);	
-					}
-					else if($symbol[1] == "/"){
-						$cal = intval($symbol[0]) / intval($symbol[2]);	
-					}
-				
+			else{
 				$replyToken = $event['replyToken'];
 				$messages = [
 					'type' => 'text',
-					'text' => $cal
-				]; */
-			} 
+					'text' => $text
+				];
+			}
 
 
 
