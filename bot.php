@@ -71,7 +71,7 @@ if (!is_null($events['events'])) {
 					'text' => "เปิดไฟห้องนั่งเล่นเรียบร้อย"
 				];
 			}
-			else if (strpos($text,'=') !== false){
+			/*else if (strpos($text,'=') !== false){
 				$symbol = explode("", $text);
 					if($symbol[1] == "+"){
 						$cal = intval($symbol[0]) + intval($symbol[2]);
@@ -90,8 +90,8 @@ if (!is_null($events['events'])) {
 				$messages = [
 					'type' => 'text',
 					'text' => $cal
-				];
-			}
+				]; 
+			} */
 
 
 
