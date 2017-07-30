@@ -13,7 +13,7 @@ $username = $url["b92d9507302d3f"];
 $password = $url["83435ac5"];
 $db = substr($url["heroku_f10f824e36ff3bf"], 1);
 
-$conn = new mysqli($server, $username, $password, $db);
+$conn = new mysqli($server, $username, $password);
 
 if (!is_null($events['events'])) {
 	// Loop through each event
