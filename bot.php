@@ -16,6 +16,21 @@ $db = substr($url["heroku_f10f824e36ff3bf"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
 
+CREATE TABLE employees (
+    employee_id SERIAL,
+    last_name VARCHAR(30),
+    first_name VARCHAR(30),
+    title VARCHAR(50)
+);
+
+INSERT INTO employees (last_name, first_name, title) VALUES
+    ('Abreu', 'Mark', 'Project Coordinator'),
+    ('Nyman', 'Larry', 'Security Engineer'),
+    ('Simmons', 'Iris', 'Software Architect'),
+    ('Miller', 'Anthony', 'Marketing Manager'),
+    ('Leigh', 'Stephen', 'UI Developer'),
+    ('Lee', 'Sonia', 'Business Analyst');
+
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
