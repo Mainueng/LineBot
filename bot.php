@@ -9,11 +9,11 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-$url = parse_url(getenv("mysql://b92d9507302d3f:83435ac5@us-cdbr-iron-east-03.cleardb.net/heroku_f10f824e36ff3bf?reconnect=true"));
-$server = $url["us-cdbr-iron-east-03.cleardb.net"];
-$username = $url["b92d9507302d3f"];
-$password = $url["83435ac5"];
-$db = substr($url["heroku_f10f824e36ff3bf"], 1);
+$url2 = parse_url(getenv("mysql://b92d9507302d3f:83435ac5@us-cdbr-iron-east-03.cleardb.net/heroku_f10f824e36ff3bf?reconnect=true"));
+$server = $url2["us-cdbr-iron-east-03.cleardb.net"];
+$username = $url2["b92d9507302d3f"];
+$password = $url2["83435ac5"];
+$db = substr($url2["heroku_f10f824e36ff3bf"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
 
