@@ -14,6 +14,7 @@ $db = substr($url["heroku_f10f824e36ff3bf"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
 
+CREATE DTATBASE heroku_f10f824e36ff3bf;
 CREATE TABLE employees (
     employee_id SERIAL,
     last_name VARCHAR(30),
@@ -29,7 +30,7 @@ INSERT INTO employees (last_name, first_name, title) VALUES
     ('Leigh', 'Stephen', 'UI Developer'),
     ('Lee', 'Sonia', 'Business Analyst');
 
-    
+
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
