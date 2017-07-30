@@ -7,13 +7,13 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-$url = parse_url(getenv("mysql://b92d9507302d3f:83435ac5@us-cdbr-iron-east-03.cleardb.net/heroku_f10f824e36ff3bf?reconnect=true"));
+$url = parse_url(getenv("https://www.cleardb.com/database/details?id=86E2F56FF8FAA685ABB41C3F1B086017"));
 $server = $url["us-cdbr-iron-east-03.cleardb.net"];
 $username = $url["b92d9507302d3f"];
 $password = $url["83435ac5"];
 $db = substr($url["heroku_f10f824e36ff3bf"], 1);
 
-$conn = new mysqli($server, $username, $password);
+$conn = new mysqli($server, $username, $password, $db);
 
 if (!is_null($events['events'])) {
 	// Loop through each event
