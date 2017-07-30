@@ -7,8 +7,6 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-$url = parse_url(getenv("mysql://b92d9507302d3f:83435ac5@us-cdbr-iron-east-03.cleardb.net/heroku_f10f824e36ff3bf?reconnect=true"));
-
 $server = $url["us-cdbr-iron-east-03.cleardb.net"];
 $username = $url["b92d9507302d3f"];
 $password = $url["83435ac5"];
@@ -31,6 +29,7 @@ INSERT INTO employees (last_name, first_name, title) VALUES
     ('Leigh', 'Stephen', 'UI Developer'),
     ('Lee', 'Sonia', 'Business Analyst');
 
+    
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
