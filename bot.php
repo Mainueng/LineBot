@@ -1,4 +1,8 @@
 <?php
+
+$proxy = 'http://fixie:vkd7AP4Z3dnMLIA@velodrome.usefixie.com:80';
+$proxyauth = '5303phanat@gmail.com:tffunelee01';
+
 $access_token = 'WBprEIEdmn/9vZJw+q3NcTQxUk/HdMcReUObJ1dkjOWzDX3X07ASeOkbPI21hKk4eCpZ2aw0HDs+Oa2FjmX6vN1UtzBic3gUxzdS1OgYQ52SYnKuu6E8qlD4c0sgjPHN6P86VymSKnYPxX/B8hWz6gdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
@@ -7,7 +11,7 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-$url = parse_url(getenv("https://www.cleardb.com/database/details?id=86E2F56FF8FAA685ABB41C3F1B086017"));
+$url = parse_url(getenv("mysql://b92d9507302d3f:83435ac5@us-cdbr-iron-east-03.cleardb.net/heroku_f10f824e36ff3bf?reconnect=true"));
 $server = $url["us-cdbr-iron-east-03.cleardb.net"];
 $username = $url["b92d9507302d3f"];
 $password = $url["83435ac5"];
@@ -109,6 +113,8 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			curl_setopt($ch, CURLOPT_PROXY, $proxy);
+			curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 			$result = curl_exec($ch);
 			curl_close($ch);
 
