@@ -16,10 +16,8 @@ $conn = new mysqli($server, $username, $password, $db);
 	}
 
 	$sql = "SELECT * FROM heroku_f10f824e36ff3bf.learn;";
-	$result = $conn->query($sql);
-		while($row = $result->fetch_assoc()) {
+
 	echo "<br> Answer:".["ID"]."<br>";
-}
 
 $url = 'https://api.line.me/v1/oauth/verify';
 
