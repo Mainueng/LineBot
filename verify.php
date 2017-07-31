@@ -4,7 +4,7 @@ $access_token = 'WBprEIEdmn/9vZJw+q3NcTQxUk/HdMcReUObJ1dkjOWzDX3X07ASeOkbPI21hKk
 $proxy = 'http://fixie:vkd7AP4Z3dnMLIA@velodrome.usefixie.com:80';
 $proxyauth = '5303phanat@gmail.com:tffunelee01';
 
-$url2 = parse_url(getenv("b92d9507302d3f:83435ac5@us-cdbr-iron-east-03.cleardb.net/heroku_f10f824e36ff3bf?reconnect=true"));
+$url2 = parse_url(getenv("mysql://b92d9507302d3f:83435ac5@us-cdbr-iron-east-03.cleardb.net/heroku_f10f824e36ff3bf?reconnect=true"));
 $server = $url2["us-cdbr-iron-east-03.cleardb.net"];
 $username = $url2["b92d9507302d3f"];
 $password = $url2["83435ac5"];
@@ -14,6 +14,9 @@ $conn = new mysqli($server, $username, $password, $db);
 	if ($conn) {
 		echo "Connected successfully (".$conn->host_info.")";
 	}
+
+	$sql = "SELECT * FROM heroku_f10f824e36ff3bf.learn;";
+	echo "<br> Qusetion:". $row["qusetion"];
 
 
 $url = 'https://api.line.me/v1/oauth/verify';
