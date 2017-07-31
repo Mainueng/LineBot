@@ -11,6 +11,9 @@ $password = $url2["83435ac5"];
 $db = substr($url2["heroku_f10f824e36ff3bf"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
+	if ($conn) {
+		echo "connected";
+	}
 
 
 $url = 'https://api.line.me/v1/oauth/verify';
