@@ -12,7 +12,7 @@ $db = substr($url2["heroku_f10f824e36ff3bf"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
 	if ($conn) {
-		echo "connected 2";
+		echo "Connected successfully (".$conn->host_info.")";
 	}
 
 
