@@ -13,7 +13,7 @@ $extra = str_replace("สอนไม้หนึ่ง","", $text);
     			$words = explode("|", $ex_tra);
     			$_question = str_replace("[","",$words[0]);
     			$_answer = str_replace("]","",$words[1]);
-echo $_answer;
+echo $text;
 echo $_question;
 
 $ch = curl_init($url);
