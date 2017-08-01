@@ -149,12 +149,23 @@ if (!is_null($events['events'])) {
 				$replyToken = $event['replyToken'];
 					$messages = [
 					'type' => 'text',
-					'text' => "ไม้หนึ่งจำได้แล้ว"
+					'text' => "ไม้หนึ่งไม่เข้าใจ สอนไม้หนึ่งได้ไหม"
 					]; 
+
+					$messages2 = [
+					'type' => 'text',
+					'text' => "สามารถสอนไม้หนึ่งได้โดย สอนไม้หนึ่ง[ถาม|ตอบ]"
+					];
+
+					$messages3 = [
+					'type' => 'sticker',
+					'packageId' => '1',
+    				'stickerId' => '2'
+				];
 
 					$data = [
 					'replyToken' => $replyToken,
-					'messages' => [$messages]
+					'messages' => [$messages,$messages2,$messages3]
 						];
 				}		
 			}
