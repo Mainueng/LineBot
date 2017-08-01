@@ -77,15 +77,15 @@ if (!is_null($events['events'])) {
 
 			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
 				$extra = str_replace("สอนไม้หนึ่ง","", $text);
-    			$pieces = explode("|", $ex_tra);
-    			$_question=str_replace("[","s",$pieces[0]);
-    			$_answer=str_replace("]","s",$pieces[1]);
+    			$words = explode("|", $ex_tra);
+    			$_question=str_replace("[","s",$words[0]);
+    			$_answer=str_replace("]","s",$words[1]);
 
-    			$newData = json_encode(array(
+    			$newData = [
         				'question' => $_question,
         				'answer'=> $_answer
-      				)
-    			);
+      				];
+      			$newData = json_encode($newData);
 
     			$opts = array(
       				'http' => array(
