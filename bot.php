@@ -4,11 +4,9 @@ $access_token = 'WBprEIEdmn/9vZJw+q3NcTQxUk/HdMcReUObJ1dkjOWzDX3X07ASeOkbPI21hKk
 $proxy = 'http://fixie:vkd7AP4Z3dnMLIA@velodrome.usefixie.com:80';
 $proxnueng = '5303phanat@gmail.com:tffunelee01';
 
-$urlDB = parse_url(getenv("mysql://b92d9507302d3f:83435ac5@us-cdbr-iron-east-03.cleardb.net/heroku_f10f824e36ff3bf?reconnect=true"));
-$server = $urlDB["us-cdbr-iron-east-03.cleardb.net"];
-$username = $urlDB["b92d9507302d3f"];
-$password = $urlDB["83435ac5"];
-$db = substr($urlDB["heroku_f10f824e36ff3bf"], 1);
+$api_key="KQwfH7eNH_WLCmVVENPPyl2kWYflYa5u";
+$urlMlab = 'https://api.mlab.com/api/1/databases/mianueng/collections/LineBot?apiKey='.$api_key.'';
+$json = file_get_contents('https://api.mlab.com/api/1/databases/mianueng/collections/LineBot?apiKey='.$api_key.'&q={"question":"'.$text.'"}');
 
 $conn = new mysqli($server, $username, $password, $db);
 
@@ -75,7 +73,7 @@ if (!is_null($events['events'])) {
 			}
 
 			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
-				$extra = str_replace("สอนเป็ด","", $_msg);
+				$extra = str_replace("สอนไม้หนึ่ง","", $_msg);
     			$pieces = explode("|", $ex_tra);
     			$_question=str_replace("[","",$pieces[0]);
     			$_answer=str_replace("]","",$pieces[1]);
