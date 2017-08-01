@@ -81,11 +81,11 @@ if (!is_null($events['events'])) {
     			$_question=str_replace("[","s",$words[0]);
     			$_answer=str_replace("]","s",$words[1]);
 
-    			$newData = json_encode(array(
+    			$newData = [
         				'question' => $_question,
         				'answer'=> $_answer
-      				)
-    			);
+      				];
+    			$newData = json_encode($newData);
 
     			$opts = array(
       				'http' => array(
