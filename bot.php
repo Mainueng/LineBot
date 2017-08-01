@@ -109,11 +109,11 @@ if (!is_null($events['events'])) {
 						'type' => 'text',
 						'text' => "ไม้หนึ่งจำได้แล้ว"
 				]; 
-					$messages3 = [
+					$messages2 = [
 						'type' => 'text',
 						'text' => "ขอบคุณที่สอนไม้หนึ่ง"
 				];
-					$messages2 = [
+					$messages3 = [
 						'type' => 'sticker',
 						'packageId' => '1',
     					'stickerId' => '2'
@@ -152,12 +152,12 @@ if (!is_null($events['events'])) {
 					'text' => "ไม้หนึ่งไม่เข้าใจ สอนไม้หนึ่งได้ไหม"
 					]; 
 
-					$messages2 = [
+					$messages3 = [
 					'type' => 'text',
 					'text' => "สามารถสอนไม้หนึ่งได้โดย สอนไม้หนึ่ง[ถาม|ตอบ]"
 					];
 
-					$messages3 = [
+					$messages2 = [
 					'type' => 'sticker',
 					'packageId' => '1',
     				'stickerId' => '4'//4
