@@ -121,7 +121,7 @@ if (!is_null($events['events'])) {
    					$replyToken = $event['replyToken'];
 					$messages = [
 						'type' => 'text',
-						'text' => $rec
+						'text' => $rec->answer
 				]; 
 					$messages2 = [
 						'type' => 'text',
