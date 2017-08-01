@@ -10,7 +10,7 @@ $headers = array('Authorization: Bearer ' . $access_token);
 
 $text = "สอนไม้หนึ่ง[สวัสดีจ้า|สวัสดีครับ]";
 $extra = str_replace("สอนไม้หนึ่ง","", $text);
-				$words = explode("|", $text);
+				$words = explode("|", $extra);
     			//$_question = str_replace("[","",$words[0]);
     			//$_answer = str_replace("]","",$words[1]);
 echo $words[1];
