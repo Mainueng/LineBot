@@ -124,11 +124,11 @@ if (!is_null($events['events'])) {
 				]; 
 					$messages2 = [
 						'type' => 'text',
-						'text' => "1"
+						'text' => " "
 				];
 					$messages3 = [
 						'type' => 'text',
-						'text' => "2"
+						'text' => " "
 				];
 			}
 		}	
