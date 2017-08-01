@@ -73,6 +73,12 @@ if (!is_null($events['events'])) {
     						'stickerId' => '16'
 						];
 					}
+
+					$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages,$messages2,$messages3],
+			
+					];
 			}
 
 			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
@@ -112,6 +118,12 @@ if (!is_null($events['events'])) {
 						'packageId' => '1',
     					'stickerId' => '1'
 				];
+
+				$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages,$messages2,$messages3]
+			
+				];
 			}
 
 			if ($isData > 0){
@@ -122,24 +134,17 @@ if (!is_null($events['events'])) {
 						'type' => 'text',
 						'text' => $rec->answer
 				]; 
-					$messages2 = [
-						'type' => 'text',
-						'text' => " "
+
+				$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages,]
 				];
-					$messages3 = [
-						'type' => 'text',
-						'text' => " "
-				];
+
 			}
 		}	
 		
 
 			$urlLine = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages,$messages2,$messages3],
-			
-			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
