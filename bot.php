@@ -160,7 +160,7 @@ if (!is_null($events['events'])) {
 					$messages3 = [
 					'type' => 'sticker',
 					'packageId' => '1',
-    				'stickerId' => '3'
+    				'stickerId' => '4'
 				];
 
 					$data = [
