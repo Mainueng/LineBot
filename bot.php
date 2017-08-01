@@ -4,9 +4,11 @@ $access_token = 'WBprEIEdmn/9vZJw+q3NcTQxUk/HdMcReUObJ1dkjOWzDX3X07ASeOkbPI21hKk
 $proxy = 'http://fixie:vkd7AP4Z3dnMLIA@velodrome.usefixie.com:80';
 $proxnueng = '5303phanat@gmail.com:tffunelee01';
 
+/*
 $api_key="KQwfH7eNH_WLCmVVENPPyl2kWYflYa5u";
 $urlMlab = 'https://api.mlab.com/api/1/databases/mianueng/collections/LineBot?apiKey='.$api_key.'';
 $json = file_get_contents('https://api.mlab.com/api/1/databases/mianueng/collections/LineBot?apiKey='.$api_key.'&q={"question":"'.$text.'"}');
+*/
 
 $conn = new mysqli($server, $username, $password, $db);
 
