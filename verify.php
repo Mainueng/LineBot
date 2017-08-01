@@ -8,6 +8,14 @@ $url = 'https://api.line.me/v1/oauth/verify';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 
+$text = "สอนไม้หนึ่ง[สวัสดีจ้า|สวัสดีครับ]";
+$extra = str_replace("สอนไม้หนึ่ง","", $text);
+    			$words = explode("|", $ex_tra);
+    			$_question = str_replace("[","",$words[0]);
+    			$_answer = str_replace("]","",$words[1]);
+echo $_answer;
+echo $_question;
+
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
