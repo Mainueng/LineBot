@@ -79,8 +79,8 @@ if (!is_null($events['events'])) {
 			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
 				$extra = str_replace("สอนไม้หนึ่ง","", $text);
     			$pieces = explode("|", $ex_tra);
-    			$_question=str_replace("[","",$pieces[0]);
-    			$_answer=str_replace("]","",$pieces[1]);
+    			$_question=str_replace("[","d",$pieces[0]);
+    			$_answer=str_replace("]","s",$pieces[1]);
 
     			$newData = json_encode(array(
         				'question' => $_question,
