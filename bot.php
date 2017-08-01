@@ -89,12 +89,12 @@ if (!is_null($events['events'])) {
       			$newData = json_encode($newData);
 
     			$opts = [
-      				'http' => array(
+      				'http' => array[
           			'method' => "POST",
           			'header' => "Content-type: application/json",
           			'content' => $newData
        				];
-    			$opts = json_encode($opts);
+    			];
 
     			$context = stream_context_create($opts);
     			$returnValue = file_get_contents($urlMlab,false,$context);
