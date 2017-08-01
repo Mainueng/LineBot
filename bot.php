@@ -38,38 +38,39 @@ if (!is_null($events['events'])) {
 
 					$cal = (string)$cal;
 				
-				if ($cal <= 999999999999999999 ) {
-					$replyToken = $event['replyToken'];
-					$messages = [
-						'type' => 'text',
-						'text' => $text." ก็เท่ากับ ".$cal." ไง"
-				]; 
-					$messages2 = [
-						'type' => 'text',
-						'text' => "มียากกว่านี้ไหม ไม้หนึ่งเบื่อ"
-				];
-					$messages3 = [
-						'type' => 'sticker',
-						'packageId' => '1',
-    					'stickerId' => '1'
+						if ($cal <= 999999999999999999 ) {
+							$replyToken = $event['replyToken'];
+							$messages = [
+							'type' => 'text',
+							'text' => $text." ก็เท่ากับ ".$cal." ไง"
+						]; 
+							$messages2 = [
+							'type' => 'text',
+							'text' => "มียากกว่านี้ไหม ไม้หนึ่งเบื่อ"
 						];
-				}
-				else if ($cal > 999999999999999999){
-					$replyToken = $event['replyToken'];
-					$messages = [
-						'type' => 'text',
-						'text' => "Error !!!"
-				]; 
-					$messages2 = [
-						'type' => 'text',
-						'text' => "เลขเยอะเกินไป ไม้หนึ่งคิดไม่ไหว"
-				];
-					$messages3 = [
-						'type' => 'sticker',
-						'packageId' => '1',
-    					'stickerId' => '16'
+							$messages3 = [
+							'type' => 'sticker',
+							'packageId' => '1',
+    						'stickerId' => '1'
 						];
-				}
+					}
+
+						else if ($cal > 999999999999999999){
+							$replyToken = $event['replyToken'];
+							$messages = [
+							'type' => 'text',
+							'text' => "Error !!!"
+						]; 
+							$messages2 = [
+							'type' => 'text',
+							'text' => "เลขเยอะเกินไป ไม้หนึ่งคิดไม่ไหว"
+						];
+							$messages3 = [
+							'type' => 'sticker',
+							'packageId' => '1',
+    						'stickerId' => '16'
+						];
+					}
 			}
 
 			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
@@ -111,7 +112,6 @@ if (!is_null($events['events'])) {
 				];
 			}
 
-  
 		}	
 			
 
