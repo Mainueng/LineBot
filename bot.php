@@ -73,7 +73,7 @@ if (!is_null($events['events'])) {
 					}
 			}
 
-			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
+/*			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
 				$extra = str_replace("สอนไม้หนึ่ง","", $_msg);
     			$pieces = explode("|", $ex_tra);
     			$_question=str_replace("[","",$pieces[0]);
@@ -113,7 +113,7 @@ if (!is_null($events['events'])) {
 			}
 
 		}	
-			
+*/			
 
 			$urlLine = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
