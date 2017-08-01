@@ -78,8 +78,8 @@ if (!is_null($events['events'])) {
 			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
 				$extra = str_replace("สอนไม้หนึ่ง","", $text);
     			$words = explode("|", $ex_tra);
-    			$_question = str_replace("[","",$words[0]);
-    			$_answer = str_replace("]","",$words[1]);
+    			$_question = str_replace("[","4",$words[0]);
+    			$_answer = str_replace("]","4",$words[1]);
 
     			$newData = [
         				'question' => $_question,
