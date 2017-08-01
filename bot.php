@@ -133,15 +133,25 @@ if (!is_null($events['events'])) {
 					$messages = [
 						'type' => 'text',
 						'text' => $rec->answer
-				]; 
+					]; 
 
-				$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages,]
-				];
+					$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages,]
+					];
 
+				}
 			}
-		}	
+			
+			else {
+				
+				$replyToken = $event['replyToken'];
+					$messages = [
+						'type' => 'text',
+						'text' => "ไม้หนึ่งจำได้แล้ว"
+				]; 			
+			}
+				
 		
 
 			$urlLine = 'https://api.line.me/v2/bot/message/reply';
