@@ -8,7 +8,8 @@ $proxnueng = '5303phanat@gmail.com:tffunelee01';
 $api_key="KQwfH7eNH_WLCmVVENPPyl2kWYflYa5u";
 $urlMlab = 'https://api.mlab.com/api/1/databases/mianueng/collections/LineBot?apiKey='.$api_key.'';
 $json = file_get_contents('https://api.mlab.com/api/1/databases/mianueng/collections/LineBot?apiKey='.$api_key.'&q={"question":"'.$text.'"}');
-
+$dataMlab = json_decode($json);
+$isData=sizeof($dataMlab);
 
 $conn = new mysqli($server, $username, $password, $db);
 
@@ -114,6 +115,22 @@ if (!is_null($events['events'])) {
 				];
 			}
 
+			if($isData > 0){
+   				foreach($dataMlab as $rec){
+
+   					$replyToken = $event['replyToken'];
+					$messages = [
+						'type' => 'text',
+						'text' => $rec
+				]; 
+					$messages2 = [
+						'type' => 'text',
+						'text' => ""
+				];
+					$messages3 = [
+						'type' => 'text',
+						'text' => ""
+				];
 		}	
 		
 
