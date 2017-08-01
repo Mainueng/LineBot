@@ -139,7 +139,7 @@ if (!is_null($events['events'])) {
 
 					$data = [
 					'replyToken' => $replyToken,
-					'messages' => [$messages,]
+					'messages' => [$messages]
 						];
 
 					}
@@ -151,6 +151,11 @@ if (!is_null($events['events'])) {
 					'type' => 'text',
 					'text' => "ไม้หนึ่งจำได้แล้ว"
 					]; 
+
+					$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages]
+						];
 				}		
 			}
 
