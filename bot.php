@@ -145,14 +145,14 @@ if (!is_null($events['events'])) {
 					}
 
 				}
-
+				else{
 				$replyToken = $event['replyToken'];
 					$messages = [
 					'type' => 'text',
 					'text' => "ไม้หนึ่งจำได้แล้ว"
-				]; 
-			}		
-		
+					]; 
+				}		
+			}
 
 			$urlLine = 'https://api.line.me/v2/bot/message/reply';
 			$post = json_encode($data);
