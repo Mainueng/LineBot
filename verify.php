@@ -4,15 +4,6 @@ $access_token = 'WBprEIEdmn/9vZJw+q3NcTQxUk/HdMcReUObJ1dkjOWzDX3X07ASeOkbPI21hKk
 $proxy = 'http://fixie:vkd7AP4Z3dnMLIA@velodrome.usefixie.com:80';
 $proxyauth = '5303phanat@gmail.com:tffunelee01';
 
-$conn = new mysqli($server, $username, $password, $db);
-	if ($conn) {
-		echo "Connected successfully (".$conn->host_info.")";
-	}
-
-	$sql = "SELECT * FROM heroku_f10f824e36ff3bf.learn";
-			echo "<br> Answer:".["Answer"]."<br>";
-		}
-
 $url = 'https://api.line.me/v1/oauth/verify';
 
 $headers = array('Authorization: Bearer ' . $access_token);
