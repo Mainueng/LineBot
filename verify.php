@@ -8,7 +8,7 @@ $url = 'https://api.line.me/v1/oauth/verify';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 
-$text = "สอนไม้หนึ่ง[สวัสดีจ้า|สวัสดีครับ]";
+$text = "สอนไม้หนึ่ง[1|2]";
 $extra = str_replace("สอนไม้หนึ่ง","", $text);
     			$words = explode("|", $ex_tra);
     			//$_question = str_replace("[","",$words[0]);
