@@ -109,11 +109,11 @@ if (!is_null($events['events'])) {
 						'type' => 'text',
 						'text' => "ไม้หนึ่งจำได้แล้ว"
 				]; 
-					$messages2 = [
+					$messages3 = [
 						'type' => 'text',
 						'text' => "ขอบคุณที่สอนไม้หนึ่ง"
 				];
-					$messages3 = [
+					$messages2 = [
 						'type' => 'sticker',
 						'packageId' => '1',
     					'stickerId' => '2'
@@ -160,7 +160,7 @@ if (!is_null($events['events'])) {
 					$messages3 = [
 					'type' => 'sticker',
 					'packageId' => '1',
-    				'stickerId' => '4'
+    				'stickerId' => '4'//4
 				];
 
 					$data = [
