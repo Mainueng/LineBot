@@ -81,7 +81,7 @@ if (!is_null($events['events'])) {
 					];
 			}
 
-			if (strpos($text, 'สอนไม้หนึ่ง') !== false) {
+			elseif (strpos($text, 'สอนไม้หนึ่ง') !== false) {
 				$extra = str_replace("สอนไม้หนึ่ง","", $text);
     			$words = explode("|", $extra);
     			$_question = str_replace("[","",$words[0]);
@@ -124,10 +124,11 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages,$messages2,$messages3]
 			
 				];
-			}
+			}	
 
-			if ($isData > 0){
-   				foreach($dataMlab as $rec){
+			elseif {
+				($isData > 0){
+   					foreach($dataMlab as $rec){
 
    					$replyToken = $event['replyToken'];
 					$messages = [
@@ -138,20 +139,19 @@ if (!is_null($events['events'])) {
 					$data = [
 					'replyToken' => $replyToken,
 					'messages' => [$messages,]
-					];
+						];
+
+					}
 
 				}
-			}
-			
-			else {
-				
+
+			else{
 				$replyToken = $event['replyToken'];
 					$messages = [
 						'type' => 'text',
 						'text' => "ไม้หนึ่งจำได้แล้ว"
-				]; 			
-			}
-				
+				]; 
+			}		
 		
 
 			$urlLine = 'https://api.line.me/v2/bot/message/reply';
