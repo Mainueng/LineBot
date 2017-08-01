@@ -126,8 +126,9 @@ if (!is_null($events['events'])) {
 				];
 			}	
 
-			elseif {
-				($isData > 0){
+			else {
+
+				if($isData > 0){
    					foreach($dataMlab as $rec){
 
    					$replyToken = $event['replyToken'];
@@ -145,11 +146,10 @@ if (!is_null($events['events'])) {
 
 				}
 
-			else{
 				$replyToken = $event['replyToken'];
 					$messages = [
-						'type' => 'text',
-						'text' => "ไม้หนึ่งจำได้แล้ว"
+					'type' => 'text',
+					'text' => "ไม้หนึ่งจำได้แล้ว"
 				]; 
 			}		
 		
