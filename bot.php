@@ -81,20 +81,19 @@ if (!is_null($events['events'])) {
     			$_question=str_replace("[","s",$words[0]);
     			$_answer=str_replace("]","s",$words[1]);
 
-    			$newData = [
+    			$newData = json_encode(array(
         				'question' => $_question,
         				'answer'=> $_answer
-      				];
+      				)
+    			);
 
-      			$newData = json_encode($newData);
-
-    			$opts = [
-      				'http' => array[
+    			$opts = array(
+      				'http' => array(
           			'method' => "POST",
           			'header' => "Content-type: application/json",
           			'content' => $newData
-       				];
-    			];
+       				)
+    			);
 
     			$context = stream_context_create($opts);
     			$returnValue = file_get_contents($urlMlab,false,$context);
