@@ -113,7 +113,7 @@ if (!is_null($events['events'])) {
 				];
 			}
 
-
+			if($isData > 0){
    				foreach($dataMlab as $rec){
 
    					$replyToken = $event['replyToken'];
