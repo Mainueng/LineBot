@@ -21,6 +21,7 @@ if (!is_null($events['events'])) {
 			$urlMlab = 'https://api.mlab.com/api/1/databases/mianueng/collections/LineBot?apiKey='.$api_key.'';
 			$json = file_get_contents('https://api.mlab.com/api/1/databases/mianueng/collections/LineBot?apiKey='.$api_key.'&q={"question":"'.$text.'"}');
 			$dataMlab = json_decode($json);
+			$isData=sizeof($dataMlab);
 
 			if (strpos($text, '=') !== false) {
 				$symbol = explode(" ", $text);
@@ -113,7 +114,7 @@ if (!is_null($events['events'])) {
 				];
 			}
 
-			if($isData > 0){
+			if ($isData > 0){
    				foreach($dataMlab as $rec){
 
    					$replyToken = $event['replyToken'];
